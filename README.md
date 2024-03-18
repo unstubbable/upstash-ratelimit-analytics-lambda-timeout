@@ -1,12 +1,6 @@
 Reproducing a task timeout in a response-streaming Lambda function, when using
 analytics for `@upstash/ratelimit`.
 
-## Start Dev Server
-
-```
-npm start
-```
-
 ## Deploy a Lambda with a Function URL
 
 Required environment variables:

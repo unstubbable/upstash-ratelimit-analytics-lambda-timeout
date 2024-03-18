@@ -30,12 +30,5 @@
     "target": "es2022",
     "verbatimModuleSyntax": true
   },
-  "include": [
-    "*.cjs",
-    "*.js",
-    "cdk/**/*",
-    "dev-server/**/*",
-    "src/**/*",
-    "types/**/*"
-  ]
+  "include": ["*.cjs", "*.js", "cdk/**/*", "src/**/*", "types/**/*"]
 }

@@ -1,0 +1,44 @@
+{
+  "name": "upstash-ratelimit-analytics-lambda-timeout",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reproducing a task timeout in Lambda when using analytics for @upstash/ratelimit",
+  "license": "MIT",
+  "author": "Hendrik Liebau <mail@hendrik-liebau.de>",
+  "type": "module",
+  "scripts": {
+    "compile": "tsc --build",
+    "compile:clean": "tsc --build --clean",
+    "compile:watch": "tsc --build --watch --preserveWatchOutput",
+    "predeploy": "cdk bootstrap --app 'tsx cdk/app.ts'",
+    "deploy": "cdk diff --app 'tsx cdk/app.ts' && cdk deploy --app 'tsx cdk/app.ts' --all",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "lint": "eslint .",
+    "start": "tsx watch --clear-screen=false --enable-source-maps --inspect dev-server/run.ts"
+  },
+  "dependencies": {
+    "@upstash/ratelimit": "^1.0.1",
+    "@upstash/redis": "^1.28.4"
+  },
+  "devDependencies": {
+    "@hono/node-server": "^1.8.2",
+    "@types/aws-lambda": "^8.10.136",
+    "@types/node": "^20.11.26",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "aws-cdk": "^2.132.1",
+    "aws-cdk-lib": "^2.132.1",
+    "constructs": "^10.3.0",
+    "eslint": "^8.53.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-import": "npm:eslint-plugin-i@^2.29.0",
+    "eslint-plugin-markdown": "^3.0.1",
+    "hono": "^4.1.0",
+    "prettier": "^2.8.7",
+    "tsx": "^4.7.1",
+    "typescript": "^5.4.2",
+    "zod": "^3.22.4"
+  }
+}

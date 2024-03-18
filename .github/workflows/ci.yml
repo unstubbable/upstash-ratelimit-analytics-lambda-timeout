@@ -1,0 +1,47 @@
+name: CI
+
+on: [push]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Compile
+        run: npm run compile
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Lint
+        run: npm run lint
+  format:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.node-version'
+          cache: 'npm'
+      - name: Install
+        run: npm ci --no-audit --no-fund
+      - name: Check Formatting
+        run: npm run format:check

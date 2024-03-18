@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "checkJs": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "inlineSources": true,
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["dom"],
+    "module": "node16",
+    "moduleResolution": "node16",
+    "noEmit": true,
+    "noErrorTruncation": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "pretty": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "target": "es2022",
+    "verbatimModuleSyntax": true
+  },
+  "include": [
+    "*.cjs",
+    "*.js",
+    "cdk/**/*",
+    "dev-server/**/*",
+    "src/**/*",
+    "types/**/*"
+  ]
+}
